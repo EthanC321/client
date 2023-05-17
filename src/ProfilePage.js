@@ -21,7 +21,7 @@ function ProfilePage() {
     }, []);
 
     const gettop = () => {
-      window.location.href = 'http://localhost:3000/artists';
+      window.location.href = '/artists';
     };
 
   return (
