@@ -1,0 +1,14 @@
+.Artists{
+    text-align: center;
+    
+}
+
+#Artist{
+    text-align: center;
+    align-items: center;
+}
+
+#Grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
