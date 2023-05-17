@@ -1,6 +1,7 @@
 // ProfilePage.js
 import React from 'react';
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import './Profile.css'
 
 function ProfilePage() {
@@ -21,7 +22,7 @@ function ProfilePage() {
     }, []);
 
     const gettop = () => {
-      window.location.href = 'https://64652bfb6aaf1c0a3aa63f8d--admirable-shortbread-dcb7d4.netlify.app/artists';
+      window.location.href = '/artists';
     };
 
   return (
