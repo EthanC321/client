@@ -41,7 +41,7 @@ function ProfilePage() {
   return (
     <div id = 'profile'>
       <h1 id = 'text'>Spotify Profile Page</h1>
-      <h2>User: {user}</h2>
+      <h2>Users: {user}</h2>
       <a>
         <img src = {img} alt="description" style={{height: '300', width: '300'}}/>
       </a>
