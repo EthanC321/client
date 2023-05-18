@@ -18,7 +18,11 @@ function ProfilePage() {
             console.log(data);
             setUsers(data.display_name);
             console.log("img" + JSON.stringify(data.images[0]));
-            setimg(data.images[0].url);})
+            setimg(data.images[0].url);
+        })
+            .catch(error => {
+           console.error('Error:', error);
+            });
     }, []);
 
     const gettop = () => {
