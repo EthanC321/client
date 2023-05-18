@@ -10,7 +10,7 @@ function ProfilePage() {
   
 
     useEffect(() => {
-        fetch('http://localhost:4000/user',{
+        fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include'
         })
             .then(response => response.json())
