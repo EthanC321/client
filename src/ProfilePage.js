@@ -14,6 +14,8 @@ function ProfilePage() {
       console.log(urlParams)
       const jwtToken = urlParams.get("jwt");
       localStorage.setItem("jwt", jwtToken);
+      console.log("JWT Token from URL: ", jwtToken);
+      console.log("JWT Token from localStorage: ", localStorage.getItem("jwt"));
       if(jwtToken){
       fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include',
@@ -40,7 +42,7 @@ function ProfilePage() {
   return (
     <div id = 'profile'>
       <h1 id = 'text'>Spotify Profile Page</h1>
-      <h2>Users: {user}</h2>
+      <h2>User: {user}</h2>
       <a>
         <img src = {img} alt="description" style={{height: '300', width: '300'}}/>
       </a>
