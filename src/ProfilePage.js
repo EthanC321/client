@@ -22,8 +22,7 @@ function ProfilePage() {
           }
         })
             .then(response => {
-              console.log(response.json)
-              response.json()
+              console.log(response.json())
             })
             .then(data => {
             console.log(data);
