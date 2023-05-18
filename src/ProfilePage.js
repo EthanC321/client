@@ -10,8 +10,15 @@ function ProfilePage() {
   
 
     useEffect(() => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const jwtToken = urlParams.get("jwt");
+      localStorage.setItem("jwt", jwtToken);
+
         fetch('http://localhost:4000/user',{
-          credentials: 'include'
+          credentials: 'include',
+          headers: {
+            'Authorization': 'Bearer ' + jwtToken
+          }
         })
             .then(response => response.json())
             .then(data => {

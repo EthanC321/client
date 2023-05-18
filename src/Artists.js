@@ -5,9 +5,13 @@ import './Artists.css';
 
 function Artists() {
     const[artists,setartists] = useState([])
+    const jwtToken = localStorage.getItem("jwt");
     useEffect(() => {
         fetch('http://localhost:4000/top',{
-          credentials: 'include'
+          credentials: 'include',
+          headers: {
+            'Authorization': 'Bearer ' + jwtToken
+          }
         })
         .then(response => response.json())
         .then(data => {
