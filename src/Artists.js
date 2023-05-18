@@ -6,7 +6,7 @@ import './Artists.css';
 function Artists() {
     const[artists,setartists] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/top',{
+        fetch('https://myspotify.herokuapp.com/top',{
           credentials: 'include'
         })
         .then(response => response.json())
