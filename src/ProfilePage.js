@@ -21,8 +21,10 @@ function ProfilePage() {
             'Authorization': 'Bearer ' + jwtToken
           }
         })
-            .then(response => {response.json()
-            console.log(response.json())})
+            .then(response => {
+              console.log(response.json())
+              response.json()
+            })
             .then(data => {
             console.log(data);
             setUsers(data.display_name);
