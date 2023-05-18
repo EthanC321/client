@@ -11,15 +11,14 @@ function ProfilePage() {
 
     useEffect(() => {
       const urlParams = new URLSearchParams(window.location.search);
-      console.log('f')
       console.log(urlParams)
       const jwtToken = urlParams.get("jwt");
       localStorage.setItem("jwt", jwtToken);
-
-        fetch('https://myspotify.herokuapp.com/user',{
+      if(jwtToken){
+      fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include',
           headers: {
-            'Authorization': 'Bearer ' + jwtToken
+            'Authorization': "Bearer" + jwtToken
           }
         })
             .then(response => response.json())
@@ -31,7 +30,7 @@ function ProfilePage() {
         })
             .catch(error => {
            console.error('Error:', error);
-            });
+            });}
     }, []);
 
     const gettop = () => {
