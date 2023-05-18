@@ -18,7 +18,7 @@ function ProfilePage() {
       fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include',
           headers: {
-            'Authorization':  jwtToken
+            'Authorization': 'Bearer ' + jwtToken
           }
         })
             .then(response => 
