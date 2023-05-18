@@ -11,6 +11,7 @@ function ProfilePage() {
 
     useEffect(() => {
       const urlParams = new URLSearchParams(window.location.search);
+      console.log('f')
       console.log(urlParams)
       const jwtToken = urlParams.get("jwt");
       localStorage.setItem("jwt", jwtToken);
