@@ -5,14 +5,14 @@ function LoginPage() {
 
 
   const login = () => {
-    window.location.href = 'http://localhost:4000/login';
+    window.location.href = 'https://myspotify.herokuapp.com/login';
   };
 
 
 
   return (
     <div>
-      <h1>Login Page</h1>
+      <h1>Login</h1>
       <button id='login' onClick={login}>Login</button>
     </div>
   );

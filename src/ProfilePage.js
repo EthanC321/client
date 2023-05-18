@@ -14,7 +14,7 @@ function ProfilePage() {
       const jwtToken = urlParams.get("jwt");
       localStorage.setItem("jwt", jwtToken);
 
-        fetch('http://localhost:4000/user',{
+        fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include',
           headers: {
             'Authorization': 'Bearer ' + jwtToken
@@ -25,7 +25,11 @@ function ProfilePage() {
             console.log(data);
             setUsers(data.display_name);
             console.log("img" + JSON.stringify(data.images[0]));
-            setimg(data.images[0].url);})
+            setimg(data.images[0].url);
+        })
+            .catch(error => {
+           console.error('Error:', error);
+            });
     }, []);
 
     const gettop = () => {
@@ -34,7 +38,7 @@ function ProfilePage() {
 
   return (
     <div id = 'profile'>
-      <h1 id = 'text'>Profile Page</h1>
+      <h1 id = 'text'>Spotify Profile Page</h1>
       <h2>User: {user}</h2>
       <a>
         <img src = {img} alt="description" style={{height: '300', width: '300'}}/>

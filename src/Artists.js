@@ -7,7 +7,7 @@ function Artists() {
     const[artists,setartists] = useState([])
     const jwtToken = localStorage.getItem("jwt");
     useEffect(() => {
-        fetch('http://localhost:4000/top',{
+        fetch('https://myspotify.herokuapp.com/top',{
           credentials: 'include',
           headers: {
             'Authorization': 'Bearer ' + jwtToken
