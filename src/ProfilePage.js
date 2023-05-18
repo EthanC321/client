@@ -31,9 +31,9 @@ function ProfilePage() {
             console.log("img" + JSON.stringify(data.images[0]));
             setimg(data.images[0].url);
         })
-            .catch(error => {
-           console.error('Error:', error);
-            });
+            //.catch(error => {
+           //console.error('Error:', error);
+            //});
     }, []);
 
     const gettop = () => {
