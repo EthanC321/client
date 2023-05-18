@@ -7,16 +7,14 @@ import './Profile.css'
 function ProfilePage() {
     const [user,setUsers] = useState('')
     const [img,setimg] = useState('')
-  
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams)
+    const jwtToken = urlParams.get("jwt");
+    localStorage.setItem("jwt", jwtToken);
+    console.log("JWT Token from URL: ", jwtToken);
+    console.log("JWT Token from localStorage: ", localStorage.getItem("jwt"));
 
     useEffect(() => {
-      const urlParams = new URLSearchParams(window.location.search);
-      console.log(urlParams)
-      const jwtToken = urlParams.get("jwt");
-      localStorage.setItem("jwt", jwtToken);
-      console.log("JWT Token from URL: ", jwtToken);
-      console.log("JWT Token from localStorage: ", localStorage.getItem("jwt"));
-      if(jwtToken){
       fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include',
           headers: {
@@ -32,7 +30,7 @@ function ProfilePage() {
         })
             .catch(error => {
            console.error('Error:', error);
-            });}
+            });
     }, []);
 
     const gettop = () => {
