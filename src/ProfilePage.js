@@ -17,10 +17,10 @@ function ProfilePage() {
       console.log("JWT Token from URL: ", jwtToken);
       console.log("JWT Token from localStorage: ", localStorage.getItem("jwt"));
       if(jwtToken){
-      fetch('https://myspotify.herokuapp.com/user' + jwtToken,{
+      fetch('https://myspotify.herokuapp.com/user',{
           credentials: 'include',
           headers: {
-            'Authorization': "Bearer" + jwtToken
+            'Authorization': 'Bearer' + jwtToken
           }
         })
             .then(response => response.json())
