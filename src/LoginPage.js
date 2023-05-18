@@ -5,7 +5,7 @@ function LoginPage() {
 
 
   const login = () => {
-    window.location.href = 'http://localhost:4000/login';
+    window.location.href = 'https://myspotify.herokuapp.com/login';
   };
 
 
