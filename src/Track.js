@@ -20,8 +20,8 @@ function Track() {
                 console.log(data.album)
                 setTrack(data)
             })
-            .then(console.log(track.name))
     }, [])
+    console.log(track)
 
     return (
         <div>
