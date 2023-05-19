@@ -1,7 +1,8 @@
 #profile{
-    align-self: center;
+    text-align: center;
+    align-content: center;
 }
 
 #text{
-    /*color: #1DB954;*/
+    color: #1DB954;
 }
