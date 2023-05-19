@@ -39,7 +39,8 @@ function ProfilePage() {
       window.location.href = '/artists';
     };
 
-    const search = () => {
+    const search = (event) => {
+      event.preventDefault();
       window.location.href = `/search?q=${searchTerm}`
     }
 
