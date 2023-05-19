@@ -7,6 +7,7 @@ import './Profile.css'
 function ProfilePage() {
     const [user,setUsers] = useState('')
     const [img,setimg] = useState('')
+    const [searchTerm, setSearchTerm] = useState('')
     const urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams)
     const jwtToken = urlParams.get("jwt");
@@ -38,6 +39,14 @@ function ProfilePage() {
       window.location.href = '/artists';
     };
 
+    const search = () => {
+      window.location.href = `/search?q=${searchTerm}`
+    }
+
+    const handleInputChange = (event) => {
+      setSearchTerm(event.target.value);
+    }
+
   return (
     <div id = 'profile'>
       <h1 id = 'text'>Spotify Profile Page</h1>
@@ -45,6 +54,13 @@ function ProfilePage() {
       <a>
         <img src = {img} alt="description" style={{height: '300', width: '300'}}/>
       </a>
+      <input 
+        type='text' 
+        placeholder='Search...' 
+        value={searchTerm} 
+        onChange={handleInputChange}
+      />
+      <button onClick={search}>Search</button>
       <button onClick={gettop}>Top Artists</button>
     </div>
   );
