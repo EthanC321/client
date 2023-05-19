@@ -44,6 +44,7 @@ function ProfilePage() {
     }
 
     const handleInputChange = (event) => {
+      event.preventDefault();
       setSearchTerm(event.target.value);
     }
 
