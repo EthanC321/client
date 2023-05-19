@@ -15,13 +15,13 @@ function Track() {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('data' + data)
-                console.log('artist' + data.artists[0])
+                console.log(data)
+                console.log(data.artists[0])
                 console.log(data.album)
                 setTrack(data)
             })
     }, [])
-    console.log('track' + track)
+    console.log(track)
 
     return (
         <div>
