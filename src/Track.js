@@ -14,14 +14,17 @@ function Track() {
             }
         })
             .then(response => response.json())
-            .then(data => setTrack(data))
+            .then(data => {
+                console.log(data)
+                setTrack(data)
+            })
     }, [])
 
-    return(
+    return (
         <div>
             <h2>{track.name}</h2>
             <h3>{track.artists.name}</h3>
-            <img src = {track.album.images[0].url} alt= {track.name} />
+            <img src={track.album.images[0].url} alt={track.name} />
         </div>
     )
 
