@@ -6,3 +6,8 @@
 #text{
     color: #1DB954;
 }
+
+#profile button {
+    display: block;
+  }
+  
