@@ -23,7 +23,7 @@ function Track() {
     }, [])
     console.log(track)
     console.log(track.album)
-    console.log(track.artists[0])
+    console.log(track.name)
 
     return (
         <div>
