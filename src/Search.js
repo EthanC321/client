@@ -8,6 +8,8 @@ function Search() {
   const urlParams = new URLSearchParams(window.location.search);
   const query = urlParams.get("q");
   const jwtToken = localStorage.getItem("jwt");
+  const [tracks, setTracks] = useState([])
+  const [albums, setAlbums] = useState([])
   useEffect(() => {
         fetch(`https://myspotify.herokuapp.com/search?q=${query}`,{
           credentials: 'include',
@@ -16,7 +18,12 @@ function Search() {
           }
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data.tracks)
+            setTracks(data.tracks)
+            console.log(data.albums)
+            setAlbums(data.albums)
+        })
   },[])
 
   const gohome = () => {

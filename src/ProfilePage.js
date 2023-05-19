@@ -20,7 +20,7 @@ function ProfilePage() {
           credentials: 'include',
           headers: {
             'Authorization': 'Bearer ' + jwtToken
-          }
+          } 
         })
             .then(response => 
             response.json())
