@@ -54,12 +54,14 @@ function ProfilePage() {
       <a>
         <img src = {img} alt="description" style={{height: '300', width: '300'}}/>
       </a>
-      <input 
-        type='text' 
-        placeholder='Search...' 
-        value={searchTerm} 
-        onChange={handleInputChange}
-      />
+      <form onSubmit={search}>
+        <input 
+          type='text' 
+          placeholder='Search...' 
+          value={searchTerm} 
+          onChange={handleInputChange}
+        />
+      </form>
       <button onClick={search}>Search</button>
       <button onClick={gettop}>Top Artists</button>
     </div>
