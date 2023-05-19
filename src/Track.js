@@ -16,6 +16,8 @@ function Track() {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
+                console.log(data.artists)
+                console.log(data.album)
                 setTrack(data)
             })
     }, [])
