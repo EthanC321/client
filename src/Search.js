@@ -34,34 +34,36 @@ function Search() {
 }
 
   return (
-    <div id = 'Grid'>
+    <div>
       <h1>Search</h1>
       <button onClick = {gohome}>Back</button>
-      <div>
-      <h1>Artists</h1>
-      {artists.map((artist, index) => (
-            <div id = 'Artist' key={index}>
-                <h3>{artist.name}</h3>
-                <img src={artist.images[0].url} alt={artist.name} height= '300' width= '300' />
-            </div>))}   
-      </div>
-      <div>
-      <h1>Albums</h1>
-      {albums.map((album, index) => (
-            <div id = 'Album' key={index}>
-                <h3>{album.name}</h3>
-                <img src={album.images[0].url} alt={album.name} height= '300' width= '300' />
-            </div>))}   
-      </div>
-      <div>
-      <h1>Tracks</h1>
-      {tracks.map((track, index) => (
-            <div id = 'Track' key={index}>
-                <h3>{track.name}</h3>
-                <img src={track.album.images[0].url} alt={track.name} height= '300' width= '300' />
-            </div>))}
-      </div>
+      <div id = 'Grid'>
+        <div>
+        <h1>Artists</h1>
+        {artists.map((artist, index) => (
+                <div id = 'Artist' key={index}>
+                    <h3>{artist.name}</h3>
+                    <img src={artist.images[0].url} alt={artist.name} height= '300' width= '300' />
+                </div>))}   
+        </div>
+        <div>
+        <h1>Albums</h1>
+        {albums.map((album, index) => (
+                <div id = 'Album' key={index}>
+                    <h3>{album.name}</h3>
+                    <img src={album.images[0].url} alt={album.name} height= '300' width= '300' />
+                </div>))}   
+        </div>
+        <div>
+        <h1>Tracks</h1>
+        {tracks.map((track, index) => (
+                <div id = 'Track' key={index}>
+                    <h3>{track.name}</h3>
+                    <img src={track.album.images[0].url} alt={track.name} height= '300' width= '300' />
+                </div>))}
+        </div>
       
+        </div>
     </div>
   );
 }
