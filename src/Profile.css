@@ -9,5 +9,15 @@
 
 #profile button {
     display: block;
-  }
+}
+
+#profile button:hover {
+    color: #1DB954;
+    background-color: black;
+}
+
+#profile button:active {
+    background-color: #1DB954;
+    color: black;
+}
   
