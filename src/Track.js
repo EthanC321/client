@@ -22,7 +22,7 @@ function Track() {
             })
     }, [])
     console.log(track)
-    console.log(track.album)
+    console.log(track.album.images)
     console.log(track.artists)
 
     return (
