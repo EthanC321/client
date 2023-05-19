@@ -21,7 +21,7 @@ function Artists() {
     },[]);
 
     const gohome = () => {
-        window.location.href = '/profile'
+        window.location.href = `/profile?jwt=${jwtToken}`
     }
 
 return (
