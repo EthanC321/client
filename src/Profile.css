@@ -30,7 +30,7 @@
   border: none; /* Remove the border */
   border-radius: 4px; /* Rounded borders */
   background-color: #f8f8f8; /* Light grey background */
-  font-size: 18px; /* Increase font size */
+  font-size: 15px; /* Increase font size */
   transition: all 0.3s ease; /* Smooth transitions */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
 }
