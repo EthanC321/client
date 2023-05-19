@@ -8,7 +8,9 @@
 }
 
 #profile button {
-    display: block;
+    display :flex;
+    background-color: #1DB954;
+    color: black;
 }
 
 #profile button:hover {
