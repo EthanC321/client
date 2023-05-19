@@ -19,6 +19,7 @@ function Track() {
                 console.log(data.artists[0])
                 console.log(data.album)
                 setTrack(data)
+                console.log(track)
             })
     }, [])
 
