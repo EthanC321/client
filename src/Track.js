@@ -5,7 +5,7 @@ function Track() {
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get("q");
     const jwtToken = localStorage.getItem("jwt");
-    const [track, setTrack] = useState([]);
+    const [track, setTrack] = useState(null);
     useEffect(() => {
         fetch(`https://myspotify.herokuapp.com/track?q=${query}`, {
             credentials: 'include',
