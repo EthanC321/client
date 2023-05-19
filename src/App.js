@@ -7,6 +7,7 @@ import LoginPage from './LoginPage';
 import ProfilePage from './ProfilePage';
 import Artists from './Artists';
 import Search from './Search';
+import Track from './Track';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element = {<HomePage/>}/>
         <Route path = "/artists" element = {<Artists/>}/>
         <Route path = "/search" element = {<Search/>}/>
+        <Route path = "/track" element = {<Track/>}/>
       </Routes>
   );
 }
