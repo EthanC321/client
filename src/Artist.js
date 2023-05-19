@@ -1,13 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-function Track() {
+function Artist() {
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get("q");
     const jwtToken = localStorage.getItem("jwt");
-    const [track, setTrack] = useState([]);
+    const [artist, setArtist] = useState([]);
     useEffect(() => {
-        fetch(`https://myspotify.herokuapp.com/track?q=${query}`, {
+        fetch(`https://myspotify.herokuapp.com/artist?q=${query}`, {
             credentials: 'include',
             headers: {
                 'Authorization': 'Bearer ' + jwtToken
@@ -15,15 +15,14 @@ function Track() {
         })
             .then(response => response.json())
             .then(data => {
-                setTrack(data)
+                setArtist(data)
             })
-    }, [track])
+    }, [artist])
 
     return (
         <div>
-            <h2>{track.name}</h2>
-            <h3>{track && track.artists && track.artists[0].name}</h3>
-            <img src = {track && track.album && track.album.images && track.album.images[0].url} alt = {track.name} width={150} height={150}/>
+            <h2>{artist.name}</h2>
+            <img src = {artist && artist.images && artist.images[0].url} alt = {artist.name} width={150} height={150}/>
 
         </div>
     )
@@ -32,4 +31,4 @@ function Track() {
 }
 
 
-export default Track
+export default Artist

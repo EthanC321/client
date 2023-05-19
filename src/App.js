@@ -8,6 +8,7 @@ import ProfilePage from './ProfilePage';
 import Artists from './Artists';
 import Search from './Search';
 import Track from './Track';
+import Artist from './Artist';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path = "/artists" element = {<Artists/>}/>
         <Route path = "/search" element = {<Search/>}/>
         <Route path = "/track" element = {<Track/>}/>
+        <Route path = "/artist" element = {<Artist/>}/>
       </Routes>
   );
 }
