@@ -20,9 +20,9 @@ function Search() {
         .then(response => response.json())
         .then(data => {
             console.log(data.tracks)
-            setTracks(data.tracks)
+            setTracks(data.tracks.items)
             console.log(data.albums)
-            setAlbums(data.albums)
+            setAlbums(data.albums.items)
         })
   },[])
 
@@ -34,6 +34,23 @@ function Search() {
     <div>
       <h1>Search</h1>
       <button onClick = {gohome}>Back</button>
+      <div>
+      <h2>Albums</h2>
+      {albums.map((album, index) => (
+            <div id = 'Album' key={index}>
+                <h2>{album.name}</h2>
+                <img src={album.images[0].url} alt={album.name} height= '300' width= '300' />
+            </div>))}   
+      </div>
+      <div>
+      <h2>Tracks</h2>
+      {tracks.map((track, index) => (
+            <div id = 'Track' key={index}>
+                <h2>{track.name}</h2>
+                <img src={track.album.images[0].url} alt={track.name} height= '300' width= '300' />
+            </div>))}
+      </div>
+      
     </div>
   );
 }
