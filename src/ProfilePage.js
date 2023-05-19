@@ -59,7 +59,7 @@ function ProfilePage() {
       <form onSubmit={search}>
         <input id = 'searchbar'
           type='text' 
-          placeholder='Search...' 
+          placeholder='Search Tracks, Albums, and Artists' 
           value={searchTerm} 
           onChange={handleInputChange}
         />
