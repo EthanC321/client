@@ -21,13 +21,13 @@ function Track() {
                 setTrack(data)
             })
     }, [track])
-    console.log(track)
-    console.log(track.album.images[0].url)
-    console.log(track.artists)
-
+    
     return (
         <div>
             <h2>{track.name}</h2>
+            <h3>{track && track.artists && track.artists[0].name}</h3>
+            <img src = {track && track.album && track.album.images && track.album.images[0].url} alt = {track.name}/>
+
         </div>
     )
 
