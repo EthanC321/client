@@ -10,6 +10,7 @@ function Search() {
   const jwtToken = localStorage.getItem("jwt");
   const [tracks, setTracks] = useState([])
   const [albums, setAlbums] = useState([])
+  const [artists, setArtists] = useState([])
   useEffect(() => {
         fetch(`https://myspotify.herokuapp.com/search?q=${query}`,{
           credentials: 'include',
@@ -23,6 +24,7 @@ function Search() {
             setTracks(data.tracks.items)
             console.log(data.albums)
             setAlbums(data.albums.items)
+            console.log(data.artists)
         })
   },[])
 
