@@ -43,8 +43,8 @@ function Search() {
           {artists.map((artist, index) => (
             <div id='Artist' key={index}>
               <h3>{artist.name}</h3>
-              <a href = {`/artist?q=${artist.id}`}>
-              <img src={artist.images?.[0]?.url || ''} alt={artist.name} height='300' width='300' />
+              <a href={`/artist?q=${artist.id}`}>
+                <img src={artist.images?.[0]?.url || ''} alt={artist.name} height='300' width='300' />
               </a>
             </div>))}
         </div>
@@ -53,7 +53,9 @@ function Search() {
           {albums.map((album, index) => (
             <div id='Album' key={index}>
               <h3>{album.name}</h3>
-              <img src={album.images?.[0]?.url || ''} alt={album.name} height='300' width='300' />
+              <a href={`/album?q${album.id}`}>
+                <img src={album.images?.[0]?.url || ''} alt={album.name} height='300' width='300' />
+              </a>
             </div>))}
         </div>
         <div>
