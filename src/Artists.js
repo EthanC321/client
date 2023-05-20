@@ -33,9 +33,7 @@ function Artists() {
                         <h2>{artists.name}</h2>
                         <a href ={`/artist?q=${artists.id}`}>
                         <img src={artists.images[0].url} alt={artists.name} height='300' width='300' />
-                        </a>
-                        <p>Popularity: {artists.popularity}</p>
-                        <p>Followers: {artists.followers.total}</p>
+                        </a>        
                     </div>))}
             </div>
         </div>

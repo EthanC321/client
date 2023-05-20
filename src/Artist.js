@@ -21,6 +21,7 @@ function Artist() {
 
     return (
         <div>
+            <button>Add Comment</button>
             <h2>{artist.name}</h2>
             <img src = {artist && artist.images && artist.images[0].url} alt = {artist.name} width={150} height={150}/>
 
