@@ -7,7 +7,7 @@ function Album() {
     const jwtToken = localStorage.getItem("jwt");
     const [album, setAlbum] = useState([]);
     useEffect(() => {
-        fetch(`https://myspotify.herokuapp.com/alubm?q=${query}`, {
+        fetch(`https://myspotify.herokuapp.com/album?q=${query}`, {
             credentials: 'include',
             headers: {
                 'Authorization': 'Bearer ' + jwtToken
@@ -17,7 +17,7 @@ function Album() {
             .then(data => {
                 setAlbum(data)
             })
-    }, [artist])
+    }, [album])
 
     return (
         <div>
