@@ -53,7 +53,7 @@ function Search() {
           {albums.map((album, index) => (
             <div id='Album' key={index}>
               <h3>{album.name}</h3>
-              <a href={`/album?q${album.id}`}>
+              <a href={`/album?q=${album.id}`}>
                 <img src={album.images?.[0]?.url || ''} alt={album.name} height='300' width='300' />
               </a>
             </div>))}

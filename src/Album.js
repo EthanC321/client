@@ -15,6 +15,7 @@ function Album() {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data)
                 setAlbum(data)
             })
     }, [album])
