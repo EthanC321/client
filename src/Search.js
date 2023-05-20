@@ -35,8 +35,8 @@ function Search() {
 
   return (
     <div>
-      <h1>Search</h1>
-      <button onClick={gohome}>Back</button>
+      <h1 id = 'title'>Search</h1>
+      <button id = 'title' onClick={gohome}>Back</button>
       <div id='Grid'>
         <div>
           <h1>Artists</h1>
