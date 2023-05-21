@@ -26,7 +26,6 @@ function Album() {
             <button>Add Comment</button>
             <h2>{album.name}</h2>
             <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
-            <img  id = 'artist' src = {album && album.artists && album.artists?.[0] && album.artists?.[0]?.images[0].url}/>
             {album && album.tracks && album.tracks.items.map((track) => (
                 <React.Fragment key={track.id}>
                     <a href={`/track?q=${track.id}`}>
