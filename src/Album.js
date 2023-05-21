@@ -25,7 +25,7 @@ function Album() {
             <button>Add Comment</button>
             <h2>{album.name}</h2>
             <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
-            {album.tracks.items.map((track) => (
+            {album && album.tracks && album.tracks.items.map((track) => (
                 <h3>{track.name}</h3>
             ))}
         </div>
