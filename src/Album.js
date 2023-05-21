@@ -7,6 +7,9 @@ function Album() {
     const query = urlParams.get("q");
     const jwtToken = localStorage.getItem("jwt");
     const [album, setAlbum] = useState([]);
+    const [commentBody, setCommentBody] = useState('');
+    const [commentRating, setCommentRating] = useState(1);
+
     useEffect(() => {
         fetch(`https://myspotify.herokuapp.com/album?q=${query}`, {
             credentials: 'include',
@@ -23,20 +26,22 @@ function Album() {
 
     const comment = () => {
 
-        fetch('https://myspotify.herokuapp.com/album',{
-            method : 'POST',
-            body : {
-                body : 'd',
-                albumName : album.name,
-                albumID : album.id,
-                userID : localStorage.getItem("userID"),
-                rating : 3
+        fetch('https://myspotify.herokuapp.com/album', {
+            method: 'POST',
+            body: {
+                body: commentBody,
+                albumName: album.name,
+                albumID: album.id,
+                userID: localStorage.getItem("userID"),
+                rating: commentRating
             }
         })
     }
 
     return (
         <div>
+            <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
+            <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
             <button onClick={comment}>Add Comment</button>
             <h2>{album.name}</h2>
             <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
