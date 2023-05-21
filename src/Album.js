@@ -22,19 +22,22 @@ function Album() {
 
     return (
         <div>
-            <button>Add Comment</button>
-            <h2>{album.name}</h2>
-            <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
-            {album && album.tracks && album.tracks.items.map((track) => (
-                <a href={`/track?q=${track.id}`}>
-                    <h3>{track.name}</h3>
-                    {track & track.artists.map((artist) => (
-                        <h4>{artist.name}</h4>
-                    ))}
-                </a>
-            ))}
+          <button>Add Comment</button>
+          <h2>{album.name}</h2>
+          <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
+          {album && album.tracks && album.tracks.items.map((track) => (
+            <React.Fragment key={track.id}>
+              <a href={`/track?q=${track.id}`}>
+                <h3>{track.name}</h3>
+              </a>
+              {track && track.artists.map((artist) => (
+                <h4 key={artist.id}>{artist.name}</h4>
+              ))}
+            </React.Fragment>
+          ))}
         </div>
-    )
+      );
+      
 
 
 }
