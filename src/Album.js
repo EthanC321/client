@@ -46,7 +46,8 @@ function Album() {
             },
             body: JSON.stringify(body)
         })
-        .then(response => console.log(response))
+        .then(response => response.json())
+        .then(data => console.log(data))
 
     }
 
