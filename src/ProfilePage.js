@@ -26,9 +26,10 @@ function ProfilePage() {
         response.json())
       .then(data => {
         console.log(data);
-        setUsers(data.display_name);
-        console.log("img" + JSON.stringify(data.images[0]));
-        setimg(data.images[0].url);
+        setUsers(data.body.display_name);
+        console.log("img" + JSON.stringify(data.body.images[0]));
+        setimg(data.body.images[0].url);
+        localStorage.setItem("userID", data.id)
       })
       .catch(error => {
         console.error('Error:', error);

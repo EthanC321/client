@@ -17,13 +17,27 @@ function Album() {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setAlbum(data)
+                setAlbum(data.data)
             })
     }, [album])
 
+    const comment = () => {
+
+        fetch('https://myspotify.herokuapp.com/album',{
+            method : 'POST',
+            body : {
+                body : 'd',
+                albumName : album.name,
+                albumID : album.id,
+                userID : localStorage.getItem("userID"),
+                rating : 3
+            }
+        })
+    }
+
     return (
         <div>
-            <button>Add Comment</button>
+            <button onClick={comment}>Add Comment</button>
             <h2>{album.name}</h2>
             <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
             {album && album.tracks && album.tracks.items.map((track) => (
@@ -33,7 +47,6 @@ function Album() {
                     </a>
                     {track && track.artists.map((artist, index) => (
                         <React.Fragment key={artist.id}>
-                            {index > 0 && ", "} {/* Add comma if it's not the first element */}
                             <h4>{artist.name}</h4>
                         </React.Fragment>
                     ))}

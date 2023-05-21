@@ -15,7 +15,8 @@ function Artist() {
         })
             .then(response => response.json())
             .then(data => {
-                setArtist(data)
+                console.log(data)
+                setArtist(data.data)
             })
     }, [artist])
 

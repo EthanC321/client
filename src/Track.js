@@ -15,7 +15,8 @@ function Track() {
         })
             .then(response => response.json())
             .then(data => {
-                setTrack(data)
+                console.log(data)
+                setTrack(data.data)
             })
     }, [track])
 
