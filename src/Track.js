@@ -6,6 +6,9 @@ function Track() {
     const query = urlParams.get("q");
     const jwtToken = localStorage.getItem("jwt");
     const [track, setTrack] = useState([]);
+    const [commentBody, setCommentBody] = useState('');
+    const [commentRating, setCommentRating] = useState(1);
+
     useEffect(() => {
         fetch(`https://myspotify.herokuapp.com/track?q=${query}`, {
             credentials: 'include',
@@ -20,8 +23,24 @@ function Track() {
             })
     }, [track])
 
+    const comment = () => {
+
+        fetch('https://myspotify.herokuapp.com/track', {
+            method: 'POST',
+            body: {
+                body: commentBody,
+                trackName: track.name,
+                trackID: track.id,
+                userID: localStorage.getItem("userID"),
+                rating: commentRating
+            }
+        })
+    }
+
     return (
         <div>
+            <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
+            <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
             <button>Add Comment</button>
             <h2>{track.name}</h2>
             <h3>{track && track.artists && track.artists[0].name}</h3>
