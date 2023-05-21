@@ -26,7 +26,12 @@ function Album() {
             <h2>{album.name}</h2>
             <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
             {album && album.tracks && album.tracks.items.map((track) => (
-                <h3>{track.name}</h3>
+                <a href={`/track?q=${track.id}`}>
+                    <h3>{track.name}</h3>
+                    {track & track.artists.map((artist) => (
+                        <h4>{artist.name}</h4>
+                    ))}
+                </a>
             ))}
         </div>
     )
