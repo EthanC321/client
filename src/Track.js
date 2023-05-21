@@ -41,7 +41,7 @@ function Track() {
         <div>
             <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
             <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
-            <button>Add Comment</button>
+            <button onClick={comment}>Add Comment</button>
             <h2>{track.name}</h2>
             <h3>{track && track.artists && track.artists[0].name}</h3>
             <img src = {track && track.album && track.album.images && track.album.images[0].url} alt = {track.name} width={150} height={150}/>
