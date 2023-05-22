@@ -4,6 +4,11 @@
     grid-template-rows: auto auto auto;
 }
 
+#root{
+    color: #fff;
+    background-color: black;
+}
+
 #title{
     align-items: center;
     text-align: center;
