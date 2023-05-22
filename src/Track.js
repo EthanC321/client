@@ -6,6 +6,7 @@ function Track() {
     const query = urlParams.get("q");
     const jwtToken = localStorage.getItem("jwt");
     const [track, setTrack] = useState([]);
+    const [comments, setComments] = useState([]);
     const [commentBody, setCommentBody] = useState('');
     const [commentRating, setCommentRating] = useState(1);
 
@@ -39,6 +40,9 @@ function Track() {
             },
             body: JSON.stringify(body)
         })
+        setCommentBody('')
+        setCommentRating(1)
+        window.location.href = `/track?q=${query}`
     }
 
     return (
@@ -49,6 +53,13 @@ function Track() {
             <h2>{track.name}</h2>
             <h3>{track && track.artists && track.artists[0].name}</h3>
             <img src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
+            {comment.map((comment,index) => (
+                <div style={ "border : 2px solid #000; border-radius: 15px;"}>
+                    <h2>{comment.userID}</h2>
+                    <h3>{comment.rating}</h3>
+                    <h3>{comment.body}</h3>
+                </div>
+            ))}
 
         </div>
     )

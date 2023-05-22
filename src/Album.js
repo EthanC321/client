@@ -39,8 +39,10 @@ function Album() {
             },
             body: JSON.stringify(body)
         })
-        .then(response => console.log(response))
-
+            .then(response => console.log(response))
+        setCommentBody('')
+        setCommentRating(1)
+        window.location.href = `/album?q=${query}`
     }
 
     return (

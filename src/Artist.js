@@ -40,6 +40,9 @@ function Artist() {
             },
             body: JSON.stringify(body)
         })
+        setCommentBody('')
+        setCommentRating(1)
+        window.location.href = `/artist?q=${query}`
 
     }
 
