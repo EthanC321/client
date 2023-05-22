@@ -21,6 +21,7 @@ function Track() {
             .then(data => {
                 console.log(data)
                 setTrack(data.data)
+                console.log(track)
             })
     }, [track])
 
