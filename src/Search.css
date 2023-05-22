@@ -14,14 +14,20 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
 }
 #Albums{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
 }
 #Tracks{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
 }
