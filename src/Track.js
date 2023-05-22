@@ -57,7 +57,7 @@ function Track() {
             <img src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
             {comments.map((comment,index) => (
                 <div style ={{ border: '1px solid black', padding: '10px' }}>
-                    <h2>{comment.userID}</h2>a
+                    <h2>{comment.userID}</h2>
                     <h3>{comment.rating}</h3>
                     <h3>{comment.body}</h3>
                 </div>
