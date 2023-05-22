@@ -25,7 +25,7 @@ function Track() {
     }, [track])
 
     const comment = () => {
-        body = {
+       const body = {
             body: commentBody,
             trackName: track.name,
             trackID: track.id,

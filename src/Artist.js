@@ -25,7 +25,7 @@ function Artist() {
 
     const comment = () => {
 
-        body = {
+        const body = {
             body: commentBody,
             artistName: artist.name,
             artistID: artist.id,
