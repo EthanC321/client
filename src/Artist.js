@@ -8,6 +8,7 @@ function Artist() {
     const [artist, setArtist] = useState([]);
     const [commentBody, setCommentBody] = useState('');
     const [commentRating, setCommentRating] = useState(1);
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         fetch(`https://myspotify.herokuapp.com/artist?q=${query}`, {
@@ -20,6 +21,7 @@ function Artist() {
             .then(data => {
                 console.log(data)
                 setArtist(data.data)
+                setComments(data.comments)
             })
     }, [artist])
 
@@ -53,6 +55,13 @@ function Artist() {
             <button onClick={comment}>Add Comment</button>
             <h2>{artist.name}</h2>
             <img src={artist && artist.images && artist.images[0].url} alt={artist.name} width={150} height={150} />
+            {comments.map((comment,index) => (
+                <div>
+                    <h2>{comment.userID}</h2>
+                    <h3>{comment.rating}</h3>
+                    <h3>{comment.body}</h3>
+                </div>
+            ))}
 
         </div>
     )
