@@ -10,7 +10,17 @@
     align-self: center;
 }
 
-#Artis{
+#Artist{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 18%;
+}
+#Album{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 18%;
+}
+#Track{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;

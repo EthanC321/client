@@ -38,7 +38,7 @@ function Search() {
       <h1 id = 'title'>Search</h1>
       <button id = 'title' onClick={gohome}>Back</button>
       <div id='Grid'>
-        <div>
+        <div id = 'Artists'>
           <h1>Artists</h1>
           {artists.map((artist, index) => (
             <div id='Artist' key={index}>
@@ -48,7 +48,7 @@ function Search() {
               </a>
             </div>))}
         </div>
-        <div>
+        <div id = 'Albums'>
           <h1>Albums</h1>
           {albums.map((album, index) => (
             <div id='Album' key={index}>
@@ -58,7 +58,7 @@ function Search() {
               </a>
             </div>))}
         </div>
-        <div>
+        <div id = 'Tracks'>
           <h1>Tracks</h1>
           {tracks.map((track, index) => (
             <div id='Track' key={index}>
