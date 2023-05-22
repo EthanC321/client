@@ -43,10 +43,10 @@
     scrollbar-color: #1DB954 #000;
 }
 
-::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track{
     background:#000;
 }
 
-::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb{
     background:#1DB954;
 }
