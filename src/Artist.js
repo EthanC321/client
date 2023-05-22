@@ -25,16 +25,22 @@ function Artist() {
 
     const comment = () => {
 
+        body = {
+            body: commentBody,
+            artistName: artist.name,
+            artistID: artist.id,
+            userID: localStorage.getItem("userID"),
+            rating: commentRating
+        }
+
         fetch('https://myspotify.herokuapp.com/artist', {
             method: 'POST',
-            body: {
-                body: commentBody,
-                artistName: artist.name,
-                artistID: artist.id,
-                userID: localStorage.getItem("userID"),
-                rating: commentRating
-            }
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body)
         })
+
     }
 
     return (
@@ -43,7 +49,7 @@ function Artist() {
             <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
             <button onClick={comment}>Add Comment</button>
             <h2>{artist.name}</h2>
-            <img src = {artist && artist.images && artist.images[0].url} alt = {artist.name} width={150} height={150}/>
+            <img src={artist && artist.images && artist.images[0].url} alt={artist.name} width={150} height={150} />
 
         </div>
     )

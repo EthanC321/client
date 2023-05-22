@@ -24,16 +24,20 @@ function Track() {
     }, [track])
 
     const comment = () => {
+        body = {
+            body: commentBody,
+            trackName: track.name,
+            trackID: track.id,
+            userID: localStorage.getItem("userID"),
+            rating: commentRating
+        }
 
         fetch('https://myspotify.herokuapp.com/track', {
             method: 'POST',
-            body: {
-                body: commentBody,
-                trackName: track.name,
-                trackID: track.id,
-                userID: localStorage.getItem("userID"),
-                rating: commentRating
-            }
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body)
         })
     }
 
@@ -44,7 +48,7 @@ function Track() {
             <button onClick={comment}>Add Comment</button>
             <h2>{track.name}</h2>
             <h3>{track && track.artists && track.artists[0].name}</h3>
-            <img src = {track && track.album && track.album.images && track.album.images[0].url} alt = {track.name} width={150} height={150}/>
+            <img src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
 
         </div>
     )

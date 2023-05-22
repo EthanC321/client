@@ -25,13 +25,6 @@ function Album() {
     }, [album])
 
     const comment = () => {
-        console.log({
-            body: commentBody,
-            albumName: album.name,
-            albumID: album.id,
-            userID: localStorage.getItem("userID"),
-            rating: commentRating
-        })
         const body = {
             body: commentBody,
             albumName: album.name,
