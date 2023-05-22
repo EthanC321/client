@@ -21,6 +21,7 @@
     grid-auto-columns: 18%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    padding-bottom: 2%;
 }
 #Albums{
     display: grid;
@@ -28,6 +29,7 @@
     grid-auto-columns: 18%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    padding-bottom: 2%;
 }
 #Tracks{
     display: grid;
@@ -35,4 +37,5 @@
     grid-auto-columns: 18%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    padding-bottom: 2%;
 }
