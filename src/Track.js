@@ -53,7 +53,7 @@ function Track() {
             <h2>{track.name}</h2>
             <h3>{track && track.artists && track.artists[0].name}</h3>
             <img src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
-            {comment.map((comment,index) => (
+            {comments.map((comment,index) => (
                 <div style={ "border : 2px solid #000; border-radius: 15px;"}>
                     <h2>{comment.userID}</h2>
                     <h3>{comment.rating}</h3>
