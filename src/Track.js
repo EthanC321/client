@@ -22,6 +22,7 @@ function Track() {
                 console.log(data)
                 setTrack(data.data)
                 console.log(track)
+                setComments(data.comments)
             })
     }, [track])
 
