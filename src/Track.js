@@ -44,7 +44,7 @@ function Track() {
         })
         setCommentBody('')
         setCommentRating(1)
-        window.location.href = `/track?q=${query}`
+        //window.location.href = `/track?q=${query}`
     }
 
     return (
