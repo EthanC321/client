@@ -38,13 +38,13 @@ function Track() {
         fetch('https://myspotify.herokuapp.com/track', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json',                                                                                                 
             },
             body: JSON.stringify(body)
         })
         setCommentBody('')
         setCommentRating(1)
-        //window.location.href = `/track?q=${query}`
+        window.location.href = `/track?q=${query}`
     }
 
     return (
