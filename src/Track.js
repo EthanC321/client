@@ -44,7 +44,7 @@ function Track() {
         })
         setCommentBody('')
         setCommentRating(1)
-        window.location.href = `/track?q=${query}`
+        //window.location.href = `/track?q=${query}`
     }
 
     return (
@@ -56,7 +56,7 @@ function Track() {
             <h3>{track && track.artists && track.artists[0].name}</h3>
             <img src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
             {comments.map((comment,index) => (
-                <div style={ "border : 2px solid #000; border-radius: 15px;"}>
+                <div>
                     <h2>{comment.userID}</h2>
                     <h3>{comment.rating}</h3>
                     <h3>{comment.body}</h3>
