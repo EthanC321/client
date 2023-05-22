@@ -4,7 +4,7 @@
     grid-template-rows: auto auto auto;
 }
 
-#root{
+#page{
     color: #fff;
     background-color: black;
 }
