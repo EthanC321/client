@@ -22,6 +22,7 @@
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
+    scrollbar-color: #1DB954 #000;
 }
 #Albums{
     display: grid;
@@ -30,6 +31,7 @@
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
+    scrollbar-color: #1DB954 #000;
 }
 #Tracks{
     display: grid;
@@ -38,6 +40,7 @@
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
+    scrollbar-color: #1DB954 #000;
 }
 
 ::-webkit-scrollbar-track{
