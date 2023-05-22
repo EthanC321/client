@@ -37,7 +37,7 @@ function Search() {
     <div>
       <h1 id='title'>Search</h1>
       <button id='title' onClick={gohome}>Back</button>
-      <div id='Grid'>
+      <div id='\rid'>
         <h1>Artists</h1>
         <div id='Artists'>
           {artists.map((artist, index) => (
