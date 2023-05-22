@@ -56,7 +56,7 @@ function Artist() {
             <h2>{artist.name}</h2>
             <img src={artist && artist.images && artist.images[0].url} alt={artist.name} width={150} height={150} />
             {comments.map((comment,index) => (
-                <div>
+                <div style={{ border: '1px solid black', padding: '10px' }}>
                     <h2>{comment.userID}</h2>
                     <h3>{comment.rating}</h3>
                     <h3>{comment.body}</h3>
