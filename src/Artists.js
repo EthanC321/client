@@ -29,7 +29,7 @@ function Artists() {
             <button onClick={gohome}>Go back to Profile</button>
             <div id='Grid-Artists'>
                 {artists.map((artists, index) => (
-                    <div id='Artist' key={index}>
+                    <div id='Artist-Artists' key={index}>
                         <h2>{artists.name}</h2>
                         <a href ={`/artist?q=${artists.id}`}>
                         <img src={artists.images[0].url} alt={artists.name} height='300' width='300' />
