@@ -27,7 +27,7 @@ function Artists() {
     return (
         <div>
             <button onClick={gohome}>Go back to Profile</button>
-            <div id='Grid'>
+            <div id='Grid-Artists'>
                 {artists.map((artists, index) => (
                     <div id='Artist' key={index}>
                         <h2>{artists.name}</h2>
