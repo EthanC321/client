@@ -49,12 +49,12 @@ function Artist() {
     }
 
     return (
-        <div>
-            <button onClick={comment}>Add Comment</button>
+        <div id = 'Trackdiv'>
             <h2>{artist.name}</h2>
-            <img src={artist && artist.images && artist.images[0].url} alt={artist.name} width={150} height={150}/>
+            <img id = 'Commentimg' src={artist && artist.images && artist.images[0].url} alt={artist.name} width={150} height={150}/>
             <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
             <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
+            <button onClick={comment}>Add Comment</button>
             {comments.map((comment,index) => (
                 <div style={{ border: '1px solid black', padding: '10px' }}>
                     <h2>{comment.userID}</h2>

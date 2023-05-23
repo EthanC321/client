@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import './Track.css'
 
 function Track() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -48,13 +49,13 @@ function Track() {
     }
 
     return (
-        <div>
-            <button onClick={comment}>Add Comment</button>
+        <div id = 'Trackdiv'>
             <h2>{track.name}</h2>
             <h3>{track && track.artists && track.artists[0].name}</h3>
-            <img src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
+            <img  id = 'Commentimg' src={track && track.album && track.album.images && track.album.images[0].url} alt={track.name} width={150} height={150} />
             <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
             <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
+            <button onClick={comment}>Add Comment</button>
             {comments.map((comment,index) => (
                 <div style ={{ border: '1px solid #1DB954', padding: '10px' , paddingInline: '10px', margin: '10px', borderRadius: '13px', background: '#1DB954'}}>
                     <h2>{comment.userID}</h2>

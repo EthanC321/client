@@ -46,12 +46,12 @@ function Album() {
     }
 
     return (
-        <div>
-            <button onClick={comment}>Add Comment</button>
+        <div id = 'Trackdiv'>
             <h2>{album.name}</h2>
-            <img src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
+            <img id = 'Commentimg' src={album && album.images && album.images[0].url} alt={album.name} width={150} height={150} />
             <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
             <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
+            <button onClick={comment}>Add Comment</button>
             {album && album.tracks && album.tracks.items.map((track) => (
                 <React.Fragment key={track.id}>
                     <a href={`/track?q=${track.id}`}>
