@@ -17,9 +17,11 @@ html {
 }
 
 #profile button {
-    display: flex;
     background-color: #1DB954;
     color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
 }
 
 #profile button:hover {

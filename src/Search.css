@@ -29,7 +29,6 @@ html {
 #Artists {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 18%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
@@ -37,7 +36,7 @@ html {
     gap: 10px;
 }
 
-#Artist{
+#Artist {
     padding: 5%;
     margin: 5%;
 }
@@ -45,7 +44,6 @@ html {
 #Albums {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 18%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
@@ -55,7 +53,6 @@ html {
 #Tracks {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 18%;
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
