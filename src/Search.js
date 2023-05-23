@@ -34,7 +34,7 @@ function Search() {
   }
 
   return (
-    <div id = 'page'>
+    <div id = 'page' style = {{margin: '0px'}}>
       <h1 id='title'>Search</h1>
       <button id='title' onClick={gohome}>Back</button>
       <div id='\rid'>

@@ -23,6 +23,7 @@
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
     scrollbar-color: #1DB954 #000;
+    gap: 10px;
 }
 #Albums{
     display: grid;
