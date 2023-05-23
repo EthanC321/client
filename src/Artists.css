@@ -1,14 +1,22 @@
-.Artists{
-    text-align: center;
-    
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
 }
 
-#Artist{
+.Artists {
+    text-align: center;
+
+}
+
+#Artist {
     text-align: center;
     align-items: center;
 }
 
-#Grid{
+#Grid {
     display: grid;
     grid-template-columns: auto auto auto;
 }

@@ -1,23 +1,32 @@
-#Grid{
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+}
+
+
+#Grid {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: auto auto auto;
 }
 
-#page{
+#page {
     color: #1DB954;
     background-color: black;
     margin: 0%;
     padding: 0%;
 }
 
-#title{
+#title {
     align-items: center;
     text-align: center;
     align-self: center;
 }
 
-#Artists{
+#Artists {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;
@@ -27,7 +36,8 @@
     scrollbar-color: #1DB954 #000;
     gap: 10px;
 }
-#Albums{
+
+#Albums {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;
@@ -36,7 +46,8 @@
     padding-bottom: 2%;
     scrollbar-color: #1DB954 #000;
 }
-#Tracks{
+
+#Tracks {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 18%;
@@ -46,10 +57,10 @@
     scrollbar-color: #1DB954 #000;
 }
 
-::-webkit-scrollbar-track{
-    background:#000;
+::-webkit-scrollbar-track {
+    background: #000;
 }
 
-::-webkit-scrollbar-thumb{
-    background:#1DB954;
+::-webkit-scrollbar-thumb {
+    background: #1DB954;
 }

@@ -1,14 +1,22 @@
-#profile{
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+}
+
+#profile {
     text-align: center;
     align-content: center;
 }
 
-#text{
+#text {
     color: #1DB954;
 }
 
 #profile button {
-    display :flex;
+    display: flex;
     background-color: #1DB954;
     color: black;
 }
@@ -23,16 +31,24 @@
     color: black;
 }
 
-#searchbar{
-  width: 40%;
-  padding: 12px 12px; /* Add some padding */
-  margin: 8px 0; /* Add some margin */
-  box-sizing: border-box; /* Make sure padding and width stays in the box */
-  border: none; /* Remove the border */
-  border-radius: 4px; /* Rounded borders */
-  background-color: #f8f8f8; /* Light grey background */
-  font-size: 15px; /* Increase font size */
-  transition: all 0.3s ease; /* Smooth transitions */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+#searchbar {
+    width: 40%;
+    padding: 12px 12px;
+    /* Add some padding */
+    margin: 8px 0;
+    /* Add some margin */
+    box-sizing: border-box;
+    /* Make sure padding and width stays in the box */
+    border: none;
+    /* Remove the border */
+    border-radius: 4px;
+    /* Rounded borders */
+    background-color: #f8f8f8;
+    /* Light grey background */
+    font-size: 15px;
+    /* Increase font size */
+    transition: all 0.3s ease;
+    /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow */
 }
-  
