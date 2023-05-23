@@ -48,7 +48,14 @@ html {
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
     scrollbar-color: #1DB954 #000;
+    gap: 10px;
 }
+
+#Album {
+    padding: 5%;
+    margin: 5%;
+}
+
 
 #Tracks {
     display: grid;
@@ -57,7 +64,14 @@ html {
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
     scrollbar-color: #1DB954 #000;
+    gap: 10px;
 }
+
+#Track {
+    padding: 5%;
+    margin: 5%;
+}
+
 
 ::-webkit-scrollbar-track {
     background: #000;
