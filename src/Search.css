@@ -76,10 +76,10 @@ html {
 }
 
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track:horizontal {
     background: #000;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb:horizontal {
     background: #1DB954;
 }
