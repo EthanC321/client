@@ -37,6 +37,11 @@ html {
     gap: 10px;
 }
 
+#Artist{
+    padding: 5%;
+    margin: 5%;
+}
+
 #Albums {
     display: grid;
     grid-auto-flow: column;
