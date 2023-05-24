@@ -39,6 +39,11 @@ function Search() {
     window.location.href = `/search?q=${searchTerm}`
   }
 
+  const handleInputChange = (event) => {
+    event.preventDefault();
+    setSearchTerm(event.target.value);
+  }
+
   return (
     <div id = 'page' style = {{margin: '0px'}}>
       <h1 id='title'>Search</h1>
