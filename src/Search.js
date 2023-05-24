@@ -11,6 +11,7 @@ function Search() {
   const [tracks, setTracks] = useState([])
   const [albums, setAlbums] = useState([])
   const [artists, setArtists] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
   useEffect(() => {
     fetch(`https://myspotify.herokuapp.com/search?q=${query}`, {
       credentials: 'include',
