@@ -33,10 +33,23 @@ function Search() {
     window.location.href = `/profile?jwt=${jwtToken}`
   }
 
+  const search = (event) => {
+    event.preventDefault();
+    window.location.href = `/search?q=${searchTerm}`
+  }
+
   return (
     <div id = 'page' style = {{margin: '0px'}}>
       <h1 id='title'>Search</h1>
       <button id='title' onClick={gohome}>Back</button>
+      <form onSubmit={search}>
+        <input id='searchbar'
+          type='text'
+          placeholder='Search Tracks, Albums, and Artists'
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
+      </form>
       <div id='\rid'>
         <h1>Artists</h1>
         <div id='Artists'>
