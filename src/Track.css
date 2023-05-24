@@ -2,9 +2,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    color: black;
+    color: #1DB954;
 }
 
 #Commentimg{
     border-radius: 7px;
+    width: 400px;
+    height: 400px;
 }

@@ -51,12 +51,12 @@ function Artist() {
     return (
         <div id = 'Trackdiv'>
             <h2>{artist.name}</h2>
-            <img id = 'Commentimg' src={artist && artist.images && artist.images[0].url} alt={artist.name} width={150} height={150}/>
+            <img id = 'Commentimg' src={artist && artist.images && artist.images[0].url} alt={artist.name}/>
             <input type="text" placeholder="Comment" value={commentBody} onChange={(e) => setCommentBody(e.target.value)} />
             <input type="number" min="1" max="5" placeholder="Rating" value={commentRating} onChange={(e) => setCommentRating(e.target.value)} />
             <button onClick={comment}>Add Comment</button>
             {comments.map((comment,index) => (
-                <div style={{border: '1px solid #1DB954', padding: '10px' , paddingInline: '10px', margin: '10px', borderRadius: '13px', background: '#1DB954' ,width:'600px'}}>
+                <div style={{border: '1px solid #000', padding: '10px' , paddingInline: '10px', margin: '10px', borderRadius: '13px', background: '#000' ,width:'600px'}}>
                     <h2>{comment.userID}</h2>
                     <h3>{comment.rating}</h3>
                     <h3>{comment.body}</h3>
