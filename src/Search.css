@@ -32,7 +32,6 @@ html {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
-    scrollbar-color: #1DB954 #000;
     gap: 10px;
 }
 
@@ -48,7 +47,6 @@ html {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
-    scrollbar-color: #1DB954 #000;
     gap: 10px;
 }
 
@@ -65,7 +63,6 @@ html {
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
     padding-bottom: 2%;
-    scrollbar-color: #1DB954 #000;
     gap: 10px;
 }
 
@@ -76,12 +73,20 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
+
+::-webkit-scrollbar-thumb:horizontal{
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb:horizontal:active{
+    opacity: 1;
+}
   
 
 ::-webkit-scrollbar-track-piece{
-    background: #000;
+    background: #191414;
 }
 
 ::-webkit-scrollbar-thumb {
